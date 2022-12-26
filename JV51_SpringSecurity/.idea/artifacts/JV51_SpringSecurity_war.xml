@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JV51_SpringSecurity:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>JV51_SpringSecurity</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="JV51_SpringSecurity-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="JV51_SpringSecurity:war exploded" />
+    </root>
+  </artifact>
+</component>

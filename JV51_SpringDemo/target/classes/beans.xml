@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="acc1" class="helloworld.Account" />
+
+    <bean id="acc2" class="helloworld.Account">
+        <property name="id" value="1" />
+        <property name="ownerName" value="Luong Minh Hoang" />
+        <property name="balance" value="1000" />
+    </bean>
+
+    <bean id="student" class="helloworld.Student">
+        <property name="id" value="1" />
+        <property name="name" value="Hoang Tung" />
+    </bean>
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="helloworld" />
+
+</beans>
