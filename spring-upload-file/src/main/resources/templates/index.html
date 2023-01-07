@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/file/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit">
+    </form>
+
+    <ul th:each="level : ${levels}">
+        <li th:text="${level}">1</li>
+    </ul>
+
+    <ul>
+        <li th:each="level : ${levels}">
+            <label th:text="${level}" />
+        </li>
+    </ul>
+
+    <ol>
+        <li th:each="file : ${files}">
+            <label th:text="${file.name}" />
+            <img height="300" width="400" th:src="${file.url}" />
+        </li>
+    </ol>
+</body>
+</html>
