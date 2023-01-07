@@ -6,8 +6,16 @@
     <title>Title</title>
 </head>
 <body>
+    <h2>Upload single file</h2>
     <form action="/file/upload" method="post" enctype="multipart/form-data">
+        <label for="files">Select file:</label>
         <input type="file" name="file">
+        <input type="submit">
+    </form>
+    <h2>Upload multiple files</h2>
+    <form action="/file/upload/multiple" method="post" enctype="multipart/form-data">
+        <label for="files">Select files:</label>
+        <input type="file" id="files" name="files" multiple>
         <input type="submit">
     </form>
 

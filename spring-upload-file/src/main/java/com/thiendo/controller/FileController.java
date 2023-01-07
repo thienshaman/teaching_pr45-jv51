@@ -15,6 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -52,6 +53,18 @@ public class FileController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/file/upload/multiple", method = RequestMethod.POST)
+    public String uploadMultiple(@RequestParam("files") MultipartFile[] files) {
+        Arrays.asList(files).forEach(file -> {
+            try {
+                fileService.store(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
         return "redirect:/";
     }
 
